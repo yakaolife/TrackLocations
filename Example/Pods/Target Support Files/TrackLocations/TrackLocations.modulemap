@@ -1,0 +1,6 @@
+framework module TrackLocations {
+  umbrella header "TrackLocations-umbrella.h"
+
+  export *
+  module * { export * }
+}
