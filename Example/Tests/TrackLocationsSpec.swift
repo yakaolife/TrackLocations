@@ -15,30 +15,35 @@ import TrackLocations
 class TrackLocationsSpec: QuickSpec {
     override func spec() {
         describe("trackLocation func") {
+        
             it("can load data from firebase"){
-                TrackLocations.load(requestURL: "https://mylocations-cc913.firebaseio.com/testing", callback: { (success, error) in
-                    expect(success) == true
-                    expect(error == nil) == true
+                waitUntil(action: { done in
+                    TrackLocations.load(requestURL: "https://mylocations-cc913.firebaseio.com/testing.json", callback: { (success, error) in
+                        expect(success) == true
+                        expect(error == nil) == true
+                        done()
+                    })
                 })
+
             }
-            it("can return error from loading"){
-                TrackLocations.load(requestURL: "https://mylocations-cc913.firebaseio.com/wrongURL", callback: { (success, error) in
-                    expect(success) == false
-                    //expect(error) == TrackLocations.LoadError
-                })
-            }
-            it("can return error from JSON parsing"){
-                TrackLocations.load(requestURL: "https:/mylocations-cc913.firebaseio.com/wrongJSON", callback: { (success, error) in
-                    expect(success) == false
-                    //expect(error) == TrackLocations.JSONError
-                })
-            }
-            it("can return error from incompatible format"){
-                TrackLocations.load(requestURL: "https:/mylocations-cc913.firebaseio.com/wrongFormat", callback: { (success, error) in
-                    expect(success) == false
-                    //expect(error) == TrackLocations.FormatError
-                })
-            }
+//            it("can return error from loading"){
+//                TrackLocations.load(requestURL: "https://mylocations-cc913.firebaseio.com/wrongURL", callback: { (success, error) in
+//                    expect(success) == false
+//                    //expect(error) == TrackLocations.LoadError
+//                })
+//            }
+//            it("can return error from JSON parsing"){
+//                TrackLocations.load(requestURL: "https:/mylocations-cc913.firebaseio.com/wrongJSON", callback: { (success, error) in
+//                    expect(success) == false
+//                    //expect(error) == TrackLocations.JSONError
+//                })
+//            }
+//            it("can return error from incompatible format"){
+//                TrackLocations.load(requestURL: "https:/mylocations-cc913.firebaseio.com/wrongFormat", callback: { (success, error) in
+//                    expect(success) == false
+//                    //expect(error) == TrackLocations.FormatError
+//                })
+//            }
             
             
         }

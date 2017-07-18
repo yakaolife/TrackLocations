@@ -11,9 +11,31 @@ import Alamofire
 import SwiftyJSON
 
 public class TrackLocations{
-    public static func load(requestURL: String, callback: (Bool, Error?)->Void){
+    public static func load(requestURL: String, callback: @escaping (Bool, Error?)->Void){
+        print("Calling load function!")
         
-        callback(false, nil)
+        Alamofire.request(requestURL).responseJSON { (response) in
+            print("Response: \(String(describing: response.response))")
+            print("Result: \(response.result)")
+            
+            guard response.result.isSuccess else{
+                print("Error during url request: \(String(describing: response.result.error))")
+                callback(false, response.result.error)
+                return
+            }
+            
+            if let json = response.result.value{
+                print("JSON: \(json)")
+            }
+            
+            callback(true, nil)
+            
+        }
+        
+    }
+    
+    public static func testFunc(){
+        print("This is just testing if we actually called TrackLocations!")
     }
     
     var locations = [Location]()
