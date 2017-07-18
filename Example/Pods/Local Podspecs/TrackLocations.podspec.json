@@ -18,5 +18,14 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "TrackLocations/Classes/**/*"
+  "source_files": "TrackLocations/Classes/**/*",
+  "frameworks": "Foundation",
+  "dependencies": {
+    "Alamofire": [
+
+    ],
+    "SwiftyJSON": [
+
+    ]
+  }
 }

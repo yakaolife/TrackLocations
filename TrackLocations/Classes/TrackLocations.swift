@@ -16,7 +16,7 @@ public class TrackLocations{
         callback(false, nil)
     }
     
-    //var locations = [Location]()
+    var locations = [Location]()
     
     //TODO: unit
     var radius = 100

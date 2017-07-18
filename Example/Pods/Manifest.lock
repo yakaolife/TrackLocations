@@ -3,7 +3,9 @@ PODS:
   - Nimble (5.1.1)
   - Quick (1.0.0)
   - SwiftyJSON (3.1.4)
-  - TrackLocations (0.1.0)
+  - TrackLocations (0.1.0):
+    - Alamofire
+    - SwiftyJSON
 
 DEPENDENCIES:
   - Alamofire
@@ -21,7 +23,7 @@ SPEC CHECKSUMS:
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
   Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
-  TrackLocations: 1ccd10d3b22964a834e398f07be812d5424e0485
+  TrackLocations: c24961f52ca3c194f945d4c7c898b69e6b5994d9
 
 PODFILE CHECKSUM: 06dd4c24bcc2734174e7e8e557949dcfe3bd6d0c
 

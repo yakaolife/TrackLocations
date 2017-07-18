@@ -15,6 +15,8 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		69FA1C4E931448BA1CE2794F /* Pods_TrackLocations_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C81C168EBF2B2CDDF93B1F /* Pods_TrackLocations_Example.framework */; };
 		8953C4AA25C2DD8834136176 /* Pods_TrackLocations_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA65D33FF97EED16E9A5C262 /* Pods_TrackLocations_Tests.framework */; };
+		D008AC3B1F1DCD0E0016F46D /* LocationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D008AC3A1F1DCD0E0016F46D /* LocationSpec.swift */; };
+		D008AC3D1F1DCD420016F46D /* TrackLocationsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D008AC3C1F1DCD420016F46D /* TrackLocationsSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,11 +30,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07BCF132B4FAEC47E47415F9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		07BCF132B4FAEC47E47415F9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		0A605AB9F010B9B9C3FEF0EB /* Pods-TrackLocations_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackLocations_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrackLocations_Example/Pods-TrackLocations_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		1A3DA2E682956F5BBBDFEF3C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1A3DA2E682956F5BBBDFEF3C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		27531E2D7B9E2AABC64F0473 /* Pods-TrackLocations_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackLocations_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrackLocations_Tests/Pods-TrackLocations_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		3C685545FF99A9C2705D669B /* TrackLocations.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = TrackLocations.podspec; path = ../TrackLocations.podspec; sourceTree = "<group>"; };
+		3C685545FF99A9C2705D669B /* TrackLocations.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TrackLocations.podspec; path = ../TrackLocations.podspec; sourceTree = "<group>"; };
 		401351E643364975BAF0C31C /* Pods-TrackLocations_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackLocations_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrackLocations_Example/Pods-TrackLocations_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* TrackLocations_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackLocations_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +48,8 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		68BC761571D643CC515FC495 /* Pods-TrackLocations_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackLocations_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrackLocations_Tests/Pods-TrackLocations_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BA65D33FF97EED16E9A5C262 /* Pods_TrackLocations_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrackLocations_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D008AC3A1F1DCD0E0016F46D /* LocationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSpec.swift; sourceTree = "<group>"; };
+		D008AC3C1F1DCD420016F46D /* TrackLocationsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackLocationsSpec.swift; sourceTree = "<group>"; };
 		D1C81C168EBF2B2CDDF93B1F /* Pods_TrackLocations_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrackLocations_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -135,6 +139,8 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				D008AC3C1F1DCD420016F46D /* TrackLocationsSpec.swift */,
+				D008AC3A1F1DCD0E0016F46D /* LocationSpec.swift */,
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -371,6 +377,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				D008AC3B1F1DCD0E0016F46D /* LocationSpec.swift in Sources */,
+				D008AC3D1F1DCD420016F46D /* TrackLocationsSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
