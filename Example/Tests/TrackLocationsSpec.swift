@@ -20,18 +20,23 @@ class TrackLocationsSpec: QuickSpec {
                 waitUntil(action: { done in
                     TrackLocations.load(requestURL: "https://mylocations-cc913.firebaseio.com/testing.json", callback: { (success, error) in
                         expect(success) == true
-                        expect(error == nil) == true
+                        expect(error == TrackLocationsError.NoError)
                         done()
                     })
                 })
 
             }
-//            it("can return error from loading"){
-//                TrackLocations.load(requestURL: "https://mylocations-cc913.firebaseio.com/wrongURL", callback: { (success, error) in
-//                    expect(success) == false
-//                    //expect(error) == TrackLocations.LoadError
-//                })
-//            }
+            it("can return error from loading"){
+                waitUntil(action: { done in
+                    TrackLocations.load(requestURL: "https://mylocations-cc913.firebaseio.com/wrongURL", callback: { (success, error) in
+                        expect(success) == false
+                        expect(error != nil)
+                        expect(error == TrackLocationsError.RequestError)
+                        done()
+                    })
+
+                })
+            }
 //            it("can return error from JSON parsing"){
 //                TrackLocations.load(requestURL: "https:/mylocations-cc913.firebaseio.com/wrongJSON", callback: { (success, error) in
 //                    expect(success) == false

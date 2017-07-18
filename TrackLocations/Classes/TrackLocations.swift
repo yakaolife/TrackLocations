@@ -10,8 +10,16 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
+public enum TrackLocationsError : Int{
+    case NoError
+    case RequestError
+    case JSONError
+    case FormatError
+}
+
 public class TrackLocations{
-    public static func load(requestURL: String, callback: @escaping (Bool, Error?)->Void){
+    
+    public static func load(requestURL: String, callback: @escaping (Bool, TrackLocationsError)->Void){
         print("Calling load function!")
         
         Alamofire.request(requestURL).responseJSON { (response) in
@@ -20,7 +28,7 @@ public class TrackLocations{
             
             guard response.result.isSuccess else{
                 print("Error during url request: \(String(describing: response.result.error))")
-                callback(false, response.result.error)
+                callback(false, TrackLocationsError.RequestError)
                 return
             }
             
@@ -28,7 +36,7 @@ public class TrackLocations{
                 print("JSON: \(json)")
             }
             
-            callback(true, nil)
+            callback(true, TrackLocationsError.NoError)
             
         }
         
