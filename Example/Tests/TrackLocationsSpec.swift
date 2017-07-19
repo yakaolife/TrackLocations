@@ -18,9 +18,10 @@ class TrackLocationsSpec: QuickSpec {
         
             it("can load data from firebase"){
                 waitUntil(action: { done in
-                    TrackLocations.load(requestURL: "https://mylocations-cc913.firebaseio.com/testing.json", callback: { (success, error) in
+                    
+                    Tracker.load(requestURL: "https://mylocations-cc913.firebaseio.com/testing.json", callback: { (success, locations, error) in
                         expect(success) == true
-                        expect(error == TrackLocationsError.NoError)
+                        expect(error) == TrackLocationsError.NoError
                         done()
                     })
                 })
@@ -28,27 +29,37 @@ class TrackLocationsSpec: QuickSpec {
             }
             it("can return error from loading"){
                 waitUntil(action: { done in
-                    TrackLocations.load(requestURL: "https://mylocations-cc913.firebaseio.com/wrongURL", callback: { (success, error) in
+                    Tracker.load(requestURL: "https://mylocations-cc913.firebaseio.com/wrongURL", callback: { (success, locations, error) in
                         expect(success) == false
-                        expect(error != nil)
-                        expect(error == TrackLocationsError.RequestError)
+                        expect(locations) == nil
+                        expect(error) == TrackLocationsError.RequestError
                         done()
                     })
 
                 })
             }
-//            it("can return error from JSON parsing"){
-//                TrackLocations.load(requestURL: "https:/mylocations-cc913.firebaseio.com/wrongJSON", callback: { (success, error) in
-//                    expect(success) == false
-//                    //expect(error) == TrackLocations.JSONError
-//                })
-//            }
-//            it("can return error from incompatible format"){
-//                TrackLocations.load(requestURL: "https:/mylocations-cc913.firebaseio.com/wrongFormat", callback: { (success, error) in
-//                    expect(success) == false
-//                    //expect(error) == TrackLocations.FormatError
-//                })
-//            }
+            it("can return error from JSON parsing"){
+                waitUntil(action: { done in
+                    Tracker.load(requestURL: "https:/mylocations-cc913.firebaseio.com/wrongJSON.json", callback: { (success, locations, error) in
+                        expect(success) == false
+                        expect(locations) == nil
+                        expect(error) == TrackLocationsError.JSONError
+                        done()
+                    })
+                })
+
+            }
+            it("can return error from incompatible format"){
+                waitUntil(action: { done in
+                    Tracker.load(requestURL: "https:/mylocations-cc913.firebaseio.com/wrongFormat.json", callback: { (success, locations, error) in
+                        expect(success) == false
+                        expect(locations) == nil
+                        expect(error)  == TrackLocationsError.FormatError
+                        done()
+                    })
+                })
+
+            }
             
             
         }

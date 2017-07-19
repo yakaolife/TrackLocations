@@ -1,25 +1,28 @@
 {
   "name": "TrackLocations",
   "version": "0.1.0",
-  "summary": "A short description of TrackLocations.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/yakaolife@gmail.com/TrackLocations",
+  "summary": "A small pod that can track a list of locations",
+  "description": "Provide utilities to load a list of locations from server and track them",
+  "homepage": "https://github.com/yakaolife/TrackLocations",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "yakaolife@gmail.com": "yakaolife@gmail.com"
+    "Betsy Kao": "yakaolife@gmail.com"
   },
   "source": {
-    "git": "https://github.com/yakaolife@gmail.com/TrackLocations.git",
+    "git": "https://github.com/yakaolife/TrackLocations",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "8.0"
   },
   "source_files": "TrackLocations/Classes/**/*",
-  "frameworks": "Foundation",
+  "frameworks": [
+    "Foundation",
+    "CoreLocation"
+  ],
   "dependencies": {
     "Alamofire": [
 
