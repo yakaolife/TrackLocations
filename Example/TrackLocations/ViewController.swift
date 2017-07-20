@@ -29,6 +29,12 @@ class ViewController: UIViewController {
     
     func enterLocation(_ location: Location){
         print("Enter \(location.name)!")
+        if UIApplication.shared.applicationState != .active{
+            //create notification
+            let note = UILocalNotification()
+            note.alertBody = "Entering \(location.name)"
+            UIApplication.shared.presentLocalNotificationNow(note)
+        }
     }
     
     func onErrorTracking(_ location: Location?,_ error: Error){
