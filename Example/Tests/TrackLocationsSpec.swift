@@ -81,12 +81,6 @@ class TrackLocationsSpec: QuickSpec {
                 })
 
             }
-            
-            it("can track locations"){
-                
-            }
-            
-            
         }
     }
 }

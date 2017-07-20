@@ -12,7 +12,7 @@
     "Betsy Kao": "yakaolife@gmail.com"
   },
   "source": {
-    "git": "https://github.com/yakaolife/TrackLocations",
+    "git": "https://github.com/yakaolife/TrackLocations.git",
     "tag": "0.1.0"
   },
   "platforms": {

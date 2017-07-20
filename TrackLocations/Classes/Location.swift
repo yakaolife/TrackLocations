@@ -14,7 +14,8 @@ public class Location: Equatable{
     
     public let longitude : Double
     public let latitude : Double
-    public let name: String
+    public let name: String //Will also use as identifier for region monitoring
+    public var radius: Double = 1000 //In meters
     
     public required init(latitude: Double, longitude: Double, name: String) {
         self.longitude = longitude
@@ -33,4 +34,10 @@ public class Location: Equatable{
         return lhs.longitude == rhs.longitude && lhs.latitude == rhs.latitude
     }
     
+}
+
+extension Location: CustomStringConvertible {
+    public var description: String{
+        return "\(name): latitude:\(latitude), longitude: \(longitude)"
+    }
 }
