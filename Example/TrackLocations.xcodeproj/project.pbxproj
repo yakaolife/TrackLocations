@@ -50,6 +50,7 @@
 		BA65D33FF97EED16E9A5C262 /* Pods_TrackLocations_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrackLocations_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D008AC3A1F1DCD0E0016F46D /* LocationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSpec.swift; sourceTree = "<group>"; };
 		D008AC3C1F1DCD420016F46D /* TrackLocationsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackLocationsSpec.swift; sourceTree = "<group>"; };
+		D03FC7951F2109E4001599B1 /* testLocations.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = testLocations.gpx; sourceTree = "<group>"; };
 		D1C81C168EBF2B2CDDF93B1F /* Pods_TrackLocations_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrackLocations_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -132,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD41AFB9204008FA782 /* Info.plist */,
+				D03FC7951F2109E4001599B1 /* testLocations.gpx */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

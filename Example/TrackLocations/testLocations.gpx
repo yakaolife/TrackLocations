@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="Xcode">
+    <wpt lat="37.795545" lon="-122.392967">
+        <name>SF Ferry Building</name>
+    </wpt>
+    <wpt lat="37.78595" lon="-122.401081">
+        <name>SF MOMA</name>
+    </wpt>
+    <wpt lat="37.782923" lon="-122.398377">
+        <name>Iterable</name>
+    </wpt>
+    <wpt lat="37.794347" lon="-122.395335">
+        <name>Philz Coffee near Ferry Building</name>
+    </wpt>
+</gpx>
