@@ -1,4 +1,4 @@
-# TrackLocations (WIP)
+# TrackLocations
 
 [![CI Status](http://img.shields.io/travis/yakaolife@gmail.com/TrackLocations.svg?style=flat)](https://travis-ci.org/yakaolife@gmail.com/TrackLocations)
 [![Version](https://img.shields.io/cocoapods/v/TrackLocations.svg?style=flat)](http://cocoapods.org/pods/TrackLocations)

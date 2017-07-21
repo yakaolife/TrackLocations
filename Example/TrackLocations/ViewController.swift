@@ -16,10 +16,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        print("Download a list of locations")
+        
+        //Any call to Tracker will trigger asking user for location service permission
+        
+        //Set up the callbacks, depend on applications
         Tracker.enterRegionCallback = enterLocation(_:)
         Tracker.trackRegionErrorCallback = onErrorTracking(_:_:)
         
+        print("Download a list of locations")
         Tracker.load(requestURL: "https://mylocations-cc913.firebaseio.com/testing.json") { (success, locations, error) in
             print("Success: \(success)")
             self.locations = locations

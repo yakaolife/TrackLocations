@@ -1,8 +1,8 @@
 {
   "name": "TrackLocations",
   "version": "0.1.0",
-  "summary": "A small pod that can track a list of locations",
-  "description": "Provide utilities to load a list of locations from server and track them",
+  "summary": "A small pod that can load and track a list of locations",
+  "description": "Provide utilities to load a list of locations from server and track them. This will also ask permission and provides callbacks when user enters the locations",
   "homepage": "https://github.com/yakaolife/TrackLocations",
   "license": {
     "type": "MIT",
